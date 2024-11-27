@@ -29,7 +29,11 @@ export const InputForm = ({taskList, setTaskList}) => {
   return (
     <div className='inputForm'>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} value={inputText}/>
+        <input 
+        type="text" 
+        onChange={handleChange} 
+        value={inputText}
+        />
         <button>
           <AddIcon />
         </button>

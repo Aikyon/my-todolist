@@ -15,7 +15,6 @@ body {
 
 header {
   text-align: center;
-  width: 80vw;
   margin: 2rem auto;
   padding: 2rem ;
  }
@@ -28,19 +27,30 @@ h1 {
   margin-right: 10px;
 }
 
-.inputForm form {
+.inputForm {
   display: flex; 
   align-items: center; 
   justify-content: center;
+
+}
+
+.inputForm form{
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  width: 30rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 10px;
 }
 
 .inputForm input {
   padding: 13px; 
   font-size: 16px; 
-  width: 30rem;
-  margin-left: 50px;
-  border-style: solid;
-  border-color: gray;
+  border: none;
+  outline: none;
+  flex-grow: 1;/* 入力フィールドを残りのスペースいっぱいに広げる */
 }
 
 .inputForm button {
@@ -52,6 +62,7 @@ h1 {
   cursor: pointer; 
   border-radius: 50%;
   margin-left: 10px;
+
 }
 
 .inputForm button:hover {
@@ -76,7 +87,7 @@ h1 {
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   margin: 2rem auto;
-  max-width: 30rem;
+  width: 30rem;
   
 }
 
@@ -133,17 +144,10 @@ button {
 
 @media (max-width: 768px) {
 
-  h1 {
-    font-size: 1.5rem; /* ヘッダーのタイトルサイズを縮小 */
-  }
-
-  .inputForm input {
-    font-size: 14px; /* テキストサイズを小さく */
-  }
 
   .inputForm button {
     padding: 8px 10px; /* ボタンサイズを調整 */
-    font-size: 14px; /* ボタンの文字サイズを小さく */
+    font-size: 14px;  
     margin: 0 5px;
   }
 
@@ -156,8 +160,8 @@ button {
   .todo {
     flex-direction: column; /* 縦方向に配置 */
     align-items: center; /* 左寄せに配置 */
-    padding: 1rem; /* 内側の余白を調整 */
     margin: 1rem auto; /* 外側の余白を調整 */
+    width: 20rem;
   }
 
   .todoText {
@@ -186,10 +190,11 @@ button {
 
 @media (max-width: 400px) {
 
+  h1 {
+    font-size: 1.5rem; /* ヘッダーのタイトルサイズを縮小 */
+  }
 
   .todo {
-    max-width: 30rem;
- }
-
-
+    width: 20rem;
+  }
 }
