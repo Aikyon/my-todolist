@@ -1,38 +1,195 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF3FD;
+  padding: 0 20px;
+}
+
+header {
   text-align: center;
+  width: 80vw;
+  margin: 2rem auto;
+  padding: 2rem ;
+ }
+
+h1 {
+  color: dimgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light {
+  margin-right: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.inputForm form {
+  display: flex; 
+  align-items: center; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.inputForm input {
+  padding: 13px; 
+  font-size: 16px; 
+  width: 30rem;
+  margin-left: 50px;
+  border-style: solid;
+  border-color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.inputForm button {
+  padding: 10px 14px;
+  font-size: 16px; 
+  border: none;
+  background-color: gray; 
+  color: #fff; 
+  cursor: pointer; 
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.inputForm button:hover {
+  background-color: #0056b3; 
+}
+
+.todoList {
+  display: flex; 
+  justify-content: center;
+  padding: 1rem; /* 内側の余白を設定 */
+  box-sizing: border-box; /* パディングを幅に含める */
+  overflow: hidden; /* はみ出しを防ぐ */
+}
+  
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  margin: 2rem auto;
+  max-width: 30rem;
+  
+}
+
+.todoText {
+    flex-grow: 1; 
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    word-break: break-word; /* 単語を途中でも折り返す */
+    overflow-wrap: break-word; /* 必要に応じて折り返す */
+    white-space: normal; /* 通常のテキスト折り返しを有効に */
+    min-width: 15rem;
   }
-  to {
-    transform: rotate(360deg);
+
+.icons {
+  display: flex; 
+}
+
+
+.icons .check,
+.icons .delete {
+  padding: 0.22rem .33rem;
+  background: rgb(83, 164, 195); /* チェックボタン色 */
+  cursor: pointer;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.icons .delete {
+  background: rgb(197, 70, 81); /* 削除ボタン色 */
+  
+}
+
+.icons .check:hover {
+  background-color: deepskyblue; 
+}
+
+.icons .delete:hover {
+  background-color: red; 
+}
+
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+button {
+  border: none;
+}
+
+
+/*レスポンシブ*/
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.5rem; /* ヘッダーのタイトルサイズを縮小 */
   }
+
+  .inputForm input {
+    font-size: 14px; /* テキストサイズを小さく */
+  }
+
+  .inputForm button {
+    padding: 8px 10px; /* ボタンサイズを調整 */
+    font-size: 14px; /* ボタンの文字サイズを小さく */
+    margin: 0 5px;
+  }
+
+  .todoList {
+    flex-direction: column; /* スクロールを考慮して縦方向に配置 */
+    align-items: center;
+    height: auto; /* 縦方向に広がるよう調整 */
+  }
+
+  .todo {
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center; /* 左寄せに配置 */
+    padding: 1rem; /* 内側の余白を調整 */
+    margin: 1rem auto; /* 外側の余白を調整 */
+  }
+
+  .todoText {
+    width: 100%; 
+    margin-right: 0; /* 右側の余白を削除 */
+    padding: 0.5rem; /* 内側の余白を調整 */
+  }
+
+  .icons {
+    width: 100%;
+    justify-content: flex-end; /* ボタンを右寄せに配置 */
+    margin-top: 0.5rem;
+  }
+
+  .icons .check,
+  .icons .delete {
+    padding: 0.3rem 0.4rem; /* ボタンサイズを調整 */
+    margin-left: 5px;
+    margin-right: 0; /* ボタン間のスペースを調整 */
+  }
+
+  .completed {
+    font-size: 0.9rem; /* 完了タスクのテキストサイズを調整 */
+  }
+}
+
+@media (max-width: 400px) {
+
+
+  .todo {
+    max-width: 30rem;
+ }
+
+
 }
