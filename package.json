@@ -2,6 +2,7 @@
   "name": "my-todolist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Aikyon.github.io/my-todolist/",
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
@@ -47,9 +48,6 @@
   },
   "devDependencies": {
     "gh-pages": "^6.2.0"
-  },
-  "homepage": {
-    "https://<Aikyon>.github.io/<my-todolis>"
   }
 
 }
