@@ -114,6 +114,7 @@ h1 {
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 5px;
+  color: #fff;
 }
 
 .icons .delete {
@@ -123,10 +124,12 @@ h1 {
 
 .icons .check:hover {
   background-color: deepskyblue; 
+  
 }
 
 .icons .delete:hover {
   background-color: red; 
+  
 }
 
 
